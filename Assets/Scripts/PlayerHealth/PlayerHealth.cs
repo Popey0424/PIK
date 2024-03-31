@@ -7,15 +7,24 @@ using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
-
+    public GameObject Character;
+    Animator CharacterANIM;
     private float health;
     private float lerpTimer;
     [Header("Health Bar")]
     public float maxHealth = 100;
     public float chipSpeed = 2f;
+    public float lightAttack;
+    public float MediumAttack;
+    public float HeavyAttack;
+    public float SpecialAttack;
     public Image frontHealthBar;
     public Image backHealthBar;
     public TextMeshProUGUI healthText;
+    public float blockDamageOffset;
+    
+
+    public bool isBlocking;
 
     //[Header(" Damage Overlay")]
     //public Image DamageOverlay;
@@ -29,6 +38,7 @@ public class PlayerHealth : MonoBehaviour
     {
         health = maxHealth;
         //DamageOverlay.color = new Color(DamageOverlay.color.r, DamageOverlay.color.g, DamageOverlay.color.b, 0);
+        CharacterANIM = Character.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -91,6 +101,36 @@ public class PlayerHealth : MonoBehaviour
     public void RestoreHealth(float healAmount)
     {
         health += healAmount;
+        healthText.text = health.ToString();
+        lerpTimer = 0f;
+    }
+    [ContextMenu("LightHit")]
+    public void LightDamage()
+    {
+
+       
+            health -= lightAttack;
+            CharacterANIM.SetTrigger("HitLight");
+            healthText.text = health.ToString();
+            lerpTimer = 0f;
+        
+            //if (isBlocking)
+            //{
+
+            //}
+            
+        
+    }
+
+    [ContextMenu("MidAttack")]
+    public void MediumDamage()
+    {
+        if(isBlocking)
+        {
+
+        }
+        health -= MediumAttack;
+        CharacterANIM.SetTrigger("HitMedium");
         healthText.text = health.ToString();
         lerpTimer = 0f;
     }

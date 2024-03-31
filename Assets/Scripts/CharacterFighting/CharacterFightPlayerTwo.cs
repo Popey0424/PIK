@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterFighting : MonoBehaviour
+public class CharacterFightPlayerTwo : MonoBehaviour
 {
-
+    public PlayerHealth health;
+    
     public KeyCode PunchAttack01;
     public KeyCode KickAttack01;
     public GameObject Character;
     Animator controllerANIM;
+   
+    
 
     public bool isBlocking;
 
@@ -17,6 +20,7 @@ public class CharacterFighting : MonoBehaviour
     {
         controllerANIM = Character.GetComponent<Animator>();
         isBlocking = false;
+        
     }
 
     private void Update()
@@ -40,8 +44,9 @@ public class CharacterFighting : MonoBehaviour
         controllerANIM.SetTrigger("Punching01");
         isBlocking = false;
         controllerANIM.SetBool("Blocking", isBlocking);
+        
+        
     }
-
     [ContextMenu("Kicking01")]
     public void attack2()
     {
@@ -52,7 +57,7 @@ public class CharacterFighting : MonoBehaviour
 
     public void SetBlocking()
     {
-        if(!isBlocking)
+        if (!isBlocking)
         {
             isBlocking = false;
         }
@@ -62,4 +67,6 @@ public class CharacterFighting : MonoBehaviour
         }
         controllerANIM.SetBool("Blocking", isBlocking);
     }
+
+    
 }
