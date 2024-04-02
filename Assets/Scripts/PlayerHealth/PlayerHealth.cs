@@ -61,6 +61,8 @@ public class PlayerHealth : MonoBehaviour
         //    }
         //}
 
+        
+
 
     }
     public void UpdateHealthUI()
@@ -113,11 +115,13 @@ public class PlayerHealth : MonoBehaviour
             CharacterANIM.SetTrigger("HitLight");
             healthText.text = health.ToString();
             lerpTimer = 0f;
-        
-            //if (isBlocking)
-            //{
 
-            //}
+        //if (isBlocking)
+        //{
+
+        //}
+            Dead();
+
             
         
     }
@@ -133,6 +137,31 @@ public class PlayerHealth : MonoBehaviour
         CharacterANIM.SetTrigger("HitMedium");
         healthText.text = health.ToString();
         lerpTimer = 0f;
+        Dead();
     }
 
+    [ContextMenu("HeavyAttack")]
+
+    public void HeavyDamage()
+    {
+        if (isBlocking)
+        {
+
+        }
+        health -= HeavyAttack;
+        CharacterANIM.SetTrigger("HitMedium");
+        healthText.text = health.ToString();
+        lerpTimer = 0f;
+        Dead();
+    }
+
+
+    public void Dead()
+    {
+        if (health <= 0)
+        {
+            CharacterANIM.SetTrigger("Dead");
+        }
+        
+    }
 }

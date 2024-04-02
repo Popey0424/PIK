@@ -10,6 +10,9 @@ public class CharacterFightPlayerTwo : MonoBehaviour
     public KeyCode KickAttack01;
     public GameObject Character;
     Animator controllerANIM;
+    public Collider ColliderBase;
+    public Collider ColliderFootLeft;
+    public Collider ColliderPoing;
    
     
 
