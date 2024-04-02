@@ -568,6 +568,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8342482089011148192, guid: f45aceef51227294cb26cdd2e844cc94, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1841724493}
+    - targetCorrespondingSourceObject: {fileID: 8342482089011148192, guid: f45aceef51227294cb26cdd2e844cc94, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1841724497}
     - targetCorrespondingSourceObject: {fileID: 8071042134615037691, guid: f45aceef51227294cb26cdd2e844cc94, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1240970640}
@@ -1446,6 +1449,32 @@ MonoBehaviour:
   ColliderFootLeft: {fileID: 1722406623}
   ColliderPoing: {fileID: 1268359514}
   isBlocking: 0
+--- !u!143 &1841724497
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1841724487}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1897129479
 GameObject:
   m_ObjectHideFlags: 0
