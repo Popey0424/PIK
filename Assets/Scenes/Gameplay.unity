@@ -657,6 +657,65 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 923516811}
   m_CullTransparentMesh: 1
+--- !u!1 &926235768 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1468220482548091189, guid: 2792f9fc8a2721042adc5fab827aa6ab, type: 3}
+  m_PrefabInstance: {fileID: 4024844885013781403}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &926235769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926235768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42f57819ac0fd9744a7ab65378e77e6b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 5
+  gravity: -9.8
+  jumpHeight: 3
+  crouching: 0
+--- !u!143 &926235775
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926235768}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &926235776
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 926235768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee2020f98cd44f74cb1c7ac43b4724e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &949166954
 GameObject:
   m_ObjectHideFlags: 0
@@ -1865,5 +1924,14 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1468220482548091189, guid: 2792f9fc8a2721042adc5fab827aa6ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 926235769}
+    - targetCorrespondingSourceObject: {fileID: 1468220482548091189, guid: 2792f9fc8a2721042adc5fab827aa6ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 926235775}
+    - targetCorrespondingSourceObject: {fileID: 1468220482548091189, guid: 2792f9fc8a2721042adc5fab827aa6ab, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 926235776}
   m_SourcePrefab: {fileID: 100100000, guid: 2792f9fc8a2721042adc5fab827aa6ab, type: 3}
